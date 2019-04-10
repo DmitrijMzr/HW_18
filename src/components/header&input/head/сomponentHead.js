@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 
-import './сomponentHead.less';
-
-
 class ComponentHead extends Component {
     render() {
         return (

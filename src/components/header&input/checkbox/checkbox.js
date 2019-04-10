@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 
-import './filterComponent.css';
-
-
-class FilterComponent extends Component {
+class Checkbox extends Component {
     render() {
         return (
             <div className={'filter'}>
@@ -14,4 +11,4 @@ class FilterComponent extends Component {
     }
 }
 
-export default FilterComponent;
+export default Checkbox;
