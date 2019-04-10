@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import TopContainer from "./inputAndLabel";
-import BottomContainer from "./listOfTasks";
+import ContainerItems from "./listOfTasks";
 
 import './App.less';
 
@@ -12,7 +12,7 @@ class App extends Component {
             <div className={'app'}>
                 <div className="todo">
                     <TopContainer/>
-                    <BottomContainer/>
+                    <ContainerItems/>
                 </div>
             </div>
         );

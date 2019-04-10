@@ -1,29 +1,18 @@
 import React, { Component } from "react";
 
-import Tasks from './allTaskItems'
+import ItemsTask from './itemsTask'
 
-import './bottomContainer.less';
+import './ItemsContainer.less';
 
 
-class BottomContainer extends Component {
+class ContainerItems extends Component {
     render() {
         return (
-            <div className={'bottomContainer'}>
-                < Tasks />
-                < Tasks />
-                < Tasks />
-                < Tasks />
-                < Tasks />
-                < Tasks />
-                < Tasks />
-                < Tasks />
-                < Tasks />
-                < Tasks />
-                < Tasks />
-                < Tasks />
+            <div className={'items-container'}>
+                < ItemsTask />
             </div>
         );
     }
 }
 
-export default BottomContainer;
+export default ContainerItems;
