@@ -1,14 +1,19 @@
 import React, { Component } from "react";
 
-import '../styles/App.css';
-import '../styles/App.less';
+import TopContainer from "./inputAndLabel";
+import BottomContainer from "./listOfTasks";
+
+import './App.less';
 
 
 class App extends Component {
     render() {
         return (
-            <div>
-                <h1>React App.</h1>
+            <div class={'app'}>
+                <div class="todo">
+                    <TopContainer/>
+                    <BottomContainer/>
+                </div>
             </div>
         );
     }
