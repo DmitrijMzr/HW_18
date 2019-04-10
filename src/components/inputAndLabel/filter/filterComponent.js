@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-import './filterComponent.less';
+import './filterComponent.css';
 
 
 class FilterComponent extends Component {

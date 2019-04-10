@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-
+import './palceHolder.less'
 
 class PlaceHolder extends Component {
     render() {
