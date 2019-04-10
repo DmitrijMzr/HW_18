@@ -13,8 +13,11 @@
   flex-direction: column;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 07b5779899dfc08ac9f003bceda7c6d26d651f0c
 body {
   margin: 0;
   padding: 0;
-}
 }

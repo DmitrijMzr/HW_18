@@ -5,14 +5,18 @@ import FilterComponent from "./filter/filterComponent";
 
 import './topContainer.less';
 
-
 class TopContainer extends Component {
     render() {
         return (
+<<<<<<< HEAD
             <div className={'topContainer'}>
+                Top Bar
+=======
+            <div class={'topContainer'}>
                 <OmponentHead/>
                 <PlaceHolder/>
                 <FilterComponent/>
+>>>>>>> 07b5779899dfc08ac9f003bceda7c6d26d651f0c
             </div>
         );
     }
