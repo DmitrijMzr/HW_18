@@ -6,7 +6,7 @@ import './topContainer.less';
 class TopContainer extends Component {
     render() {
         return (
-            <div class={'topContainer'}>
+            <div className={'topContainer'}>
                 Top Bar
             </div>
         );

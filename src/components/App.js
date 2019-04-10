@@ -9,8 +9,8 @@ import './App.less';
 class App extends Component {
     render() {
         return (
-            <div class={'app'}>
-                <div class="todo">
+            <div className={'app'}>
+                <div className="todo">
                     <TopContainer/>
                     <BottomContainer/>
                 </div>

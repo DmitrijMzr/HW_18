@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 
+import Tasks from './allTaskItems'
+
 import './bottomContainer.less';
 
 
 class BottomContainer extends Component {
     render() {
         return (
-            <div class={'bottomContainer'}>
-                Bottom Bar
+            <div className={'bottomContainer'}>
+                < Tasks />
             </div>
         );
     }
