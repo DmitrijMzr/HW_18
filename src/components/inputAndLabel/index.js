@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import OmponentHead from "./componenthead/сomponentHead";
+import ComponentHead from "./componenthead/сomponentHead";
 import PlaceHolder from "./placeholder/placeHolder";
 import FilterComponent from "./filter/filterComponent";
 
@@ -10,7 +10,7 @@ class TopContainer extends Component {
     render() {
         return (
             <div className={'topContainer'}>
-                <OmponentHead/>
+                <ComponentHead/>
                 <PlaceHolder/>
                 <FilterComponent/>
             </div>

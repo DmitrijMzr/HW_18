@@ -1,9 +1,7 @@
 input[type="checkbox"]{
-    margin-top: 10px;
-    margin-left: 350px;
     position: relative;
-    width: 80px;
-    height: 40px;
+    width: 40px;
+    height: 20px;
     -webkit-appearance:none;
     background: #c6c6c6;
     outline: none;
@@ -17,8 +15,8 @@ input:checked[type="checkbox"]{
 input[type="checkbox"]:before{
     content: '';
     position: absolute;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     border-radius: 20px;
     top: 0;
     left: 0;
@@ -28,5 +26,9 @@ input[type="checkbox"]:before{
     transition: .5s;
 }
 input:checked[type="checkbox"]:before{
-    left: 40px;
+    left: 20px;
+}
+
+.filter > label {
+    margin-bottom: 9vh;
 }

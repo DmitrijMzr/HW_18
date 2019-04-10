@@ -3,10 +3,10 @@ import React, { Component } from "react";
 import './сomponentHead.less';
 
 
-class OmponentHead extends Component {
+class ComponentHead extends Component {
     render() {
         return (
-            <div>
+            <div className={'name-app'}>
                 <h1>
                     <span>T</span>
                     <span>o</span>
@@ -22,4 +22,4 @@ class OmponentHead extends Component {
     }
 }
 
-export default OmponentHead;
+export default ComponentHead;

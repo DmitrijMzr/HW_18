@@ -10,6 +10,17 @@ class BottomContainer extends Component {
         return (
             <div className={'bottomContainer'}>
                 < Tasks />
+                < Tasks />
+                < Tasks />
+                < Tasks />
+                < Tasks />
+                < Tasks />
+                < Tasks />
+                < Tasks />
+                < Tasks />
+                < Tasks />
+                < Tasks />
+                < Tasks />
             </div>
         );
     }

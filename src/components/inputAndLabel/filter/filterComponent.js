@@ -7,8 +7,8 @@ class FilterComponent extends Component {
     render() {
         return (
             <div className={'filter'}>
+                <label htmlFor="checked">Hide completed task</label>
                 <input id="checked" type="checkbox" />
-                <label htmlFor="checked"></label>
             </div>
         );
     }
