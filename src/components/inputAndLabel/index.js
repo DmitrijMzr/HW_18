@@ -1,15 +1,17 @@
 import React, { Component } from "react";
-import ComponentHead from "./lable/ComponentHead";
-import './topContainer.less';
-import PlaceHolder from "./input/placeHolder";
+import OmponentHead from "./componenthead/сomponentHead";
+import PlaceHolder from "./placeholder/placeHolder";
+import FilterComponent from "./filter/filterComponent";
 
+import './topContainer.less';
 
 class TopContainer extends Component {
     render() {
         return (
-            <div className={'topContainer'}>
-                <ComponentHead/>
+            <div class={'topContainer'}>
+                <OmponentHead/>
                 <PlaceHolder/>
+                <FilterComponent/>
             </div>
         );
     }

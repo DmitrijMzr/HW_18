@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import './ComponentHead.less';
+import './сomponentHead.less';
 
 
-class ComponentHead extends Component {
+class OmponentHead extends Component {
     render() {
         return (
             <div>
@@ -22,4 +22,4 @@ class ComponentHead extends Component {
     }
 }
 
-export default ComponentHead;
+export default OmponentHead;
