@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 
-import './head.less';
+import './ComponentHead.less';
 
 
-class Head extends Component {
+class ComponentHead extends Component {
     render() {
         return (
             <div>
@@ -22,4 +22,4 @@ class Head extends Component {
     }
 }
 
-export default Head;
+export default ComponentHead;

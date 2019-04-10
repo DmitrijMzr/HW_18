@@ -1,16 +1,18 @@
 import React, { Component } from "react";
 
-import './topContainer.less';
+import './placeHolder.less';
 
 
-class TopContainer extends Component {
+class PlaceHolder extends Component {
     render() {
         return (
-            <div class={'topContainer'}>
-                Top Bar
+            <div className={'place-holder'}>
+                <input id="task" type="text" />
+                    <label htmlFor="task"/>
+                    <button type="button" className="add-text">Add</button>
             </div>
         );
     }
 }
 
-export default TopContainer;
+export default PlaceHolder;
