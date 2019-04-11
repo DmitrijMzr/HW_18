@@ -1,18 +1,65 @@
 import React, { Component } from "react";
 
-import TopContainer from "./inputAndLabel";
-import ContainerItems from "./listOfTasks";
+import InputsHeader from "./header&input";
+import ToDoList from "./toDoList";
+import todoItems from "./store.js"
 
-import './App.less';
-
+import '../styles/App.less';
 
 class App extends Component {
+    constructor (props) {
+        super(props);
+        this.addItem = this.addItem.bind(this);
+        this.removeItem = this.removeItem.bind(this);
+        this.markTodoDone = this.markTodoDone.bind(this);
+        this.hideDoneTask = this.hideDoneTask.bind(this);
+        this.arrForSaveState = [];
+        this.state = {todoItems: todoItems};
+        this.lastIndex = 3;
+    }
+    addItem(todoItem) {
+        todoItems.unshift({
+            index: ++this.lastIndex,
+            value: todoItem.newItemValue,
+            done: false
+        });
+        this.setState({todoItems: todoItems});
+    }
+    removeItem (itemIndex) {
+        todoItems.splice(itemIndex, 1);
+        this.setState({todoItems: todoItems});
+    }
+    markTodoDone(itemIndex) {
+        var todo = todoItems[itemIndex];
+        todoItems.splice(itemIndex, 1);
+        todo.done = !todo.done;
+        todo.done ? todoItems.push(todo) : todoItems.unshift(todo);
+        this.setState({todoItems: todoItems});
+    }
+    hideDoneTask(check){
+
+        let arr = [];
+
+        if (check) {
+            this.arrForSaveState = todoItems;
+            todoItems.forEach( (task) => {
+                if (task.done === false) {
+                    arr.push(task);
+                }
+                this.setState({todoItems: arr});
+            })
+        } else {
+            arr = this.state.arrForSaveState
+            this.setState({todoItems: arr})
+        }
+
+    }
     render() {
         return (
             <div className={'app'}>
-                <div className="todo">
-                    <TopContainer/>
-                    <ContainerItems/>
+                <div className="app__todo">
+                    <InputsHeader addItem={this.addItem} hideDoneTask={this.hideDoneTask}/>
+                    <ToDoList items={this.props.initItems} removeItem={this.removeItem} markTodoDone={this.markTodoDone}/>
                 </div>
             </div>
         );
