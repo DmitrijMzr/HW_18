@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import ItemToDo from './item/item'
 
 class ToDoList extends Component {
+
     render() {
         let items = this.props.items.map((item, index) => {
             return (
@@ -10,7 +11,7 @@ class ToDoList extends Component {
             );
         });
         return (
-            <div className={'items-container'}>
+            <div className={'todo-list'}>
                 {items}
             </div>
         );

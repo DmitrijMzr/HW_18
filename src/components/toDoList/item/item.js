@@ -19,14 +19,16 @@ class ItemToDo extends Component {
     }
 
     render() {
-        let todoClass = this.props.item.done ? "done" : "undone";
+        let todoClass = this.props.item.done ? "done" : "undone";  // сделать курсор поинт
 
         return (
-            <div className={'to-do-item'}>
-                <div className={todoClass}>
-                    <span className="glyphicon glyphicon-ok icon" aria-hidden="true" onClick={this.onClickDone}></span>
-                    {this.props.item.value}
-                    <button type="button" className="close" onClick={this.onClickClose}>&times;</button>
+            <div className={'todo-list__item'}>
+                <div className={todoClass} aria-hidden="true" onClick={this.onClickDone}>
+                    <div className="todo-list__item-description">{this.props.item.value}</div>
+                    <div className="todo-list__item-bttn">
+                        <button type="button" className="todo-list__item-bttn_bttn-edit" onClick={this.onClickClose}>&times;</button>
+                        <button type="button" className="todo-list__item-bttn_bttn-del" onClick={this.onClickClose}>&times;</button>
+                    </div>
                 </div>
             </div>
         );

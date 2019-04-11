@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class ComponentHead extends Component {
     render() {
         return (
-            <div className={'name-app'}>
+            <div className={'container-input__app-logo'}>
                 <h1>
                     <span>T</span>
                     <span>o</span>

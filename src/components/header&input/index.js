@@ -21,11 +21,11 @@ class InputsHeader extends Component {
     }
     render() {
         return (
-            <div className={'topContainer'}>
+            <div className={'container-input'}>
                 <ComponentHead />
-                     <form ref="form" onSubmit={this.onSubmit} className="form-inline">
-                         <input type="text" ref="itemName" className="form-control" placeholder="add a new todo..."/>
-                         <button type="submit" className="btn btn-default">Add</button>
+                     <form ref="form" onSubmit={this.onSubmit} className="container-input__form">
+                         <input type="text" ref="itemName" className="container-input__form-input" placeholder="add a new todo..."/>
+                         <button type="submit" className="container-input__form-button">Add</button>
                      </form>
                 <Checkbox/>
             </div>

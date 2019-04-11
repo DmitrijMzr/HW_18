@@ -36,7 +36,7 @@ class App extends Component {
     render() {
         return (
             <div className={'app'}>
-                <div className="todo">
+                <div className="app__todo">
                     <InputsHeader addItem={this.addItem} />
                     <ToDoList items={this.props.initItems} removeItem={this.removeItem} markTodoDone={this.markTodoDone}/>
                 </div>
