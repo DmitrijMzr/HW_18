@@ -10,11 +10,11 @@ class ItemToDo extends Component {
         this.onClickDone = this.onClickDone.bind(this);
     }
     onClickClose() {
-        var index = parseInt(this.props.index);
+        const index = parseInt(this.props.index);
         this.props.removeItem(index);
     }
     onClickDone() {
-        var index = parseInt(this.props.index);
+        const index = parseInt(this.props.index);
         this.props.markTodoDone(index);
     }
 

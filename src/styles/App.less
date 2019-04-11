@@ -103,35 +103,41 @@ body {
   }
 
   .container-input__form {
+    flex-wrap: nowrap;
+    width: 100%;
+    padding-left: 30%;
+
     input {
       background: #363636;
       border: none;
       outline: none;
-      width: 65%;
-      height: 40px;
-      border-radius: 2px;
-      font-size: 24px;
+      width: 55%;
+      height: 7vh;
+      border-radius: 3px;
+      font-size: 18px;
       color: white;
-      margin-top: 1.5vh;
-      padding: 0 20px;
+      margin-top: 1.2vh;
+      padding: 0 10px;
       opacity: 0.5;
     }
 
     .container-input__form-button {
       border: none;
       outline: none;
-      background: #03a9f4;
-      width: 100px;
-      height: 40px;
-      font-size: 24px;
-      margin-left: 10px;
-      border-radius: 5px;
+      color: white;
+      background: rgba(54, 54, 54, 0.62);
+      width: 5vw;
+      height: 7vh;
+      font-size: 18px;
+      margin-left: 0.5vw;
+      border-radius: 3px;
+      cursor: pointer;
     }
   }
 
   .container-input__checkbox {
     margin-top: 1.5vh;
-    padding-left: 3vh;
+    padding-left: 8vw;
 
     input[type="checkbox"] {
       position: relative;
@@ -144,6 +150,7 @@ body {
       border-radius: 20px;
       box-shadow: inset 0 0 5px rgba(0, 0, 0, .2);
       transition: .5s;
+      cursor: pointer;
     }
 
     input:checked[type="checkbox"] {
@@ -169,7 +176,7 @@ body {
     }
 
     label {
-      font-size: 18px;
+      font-size: 17px;
       margin-right: 2vh;
     }
   }
@@ -192,6 +199,7 @@ body {
     transition: all .2s;
     user-select: none;
     align-items: flex-start;
+    cursor: pointer;
 
     .done {
       display: flex;
@@ -209,15 +217,15 @@ body {
         flex-grow: 1;
 
         todo-list__item-bttn_bttn-del {
-
+          cursor: pointer;
         }
 
         todo-list__item-bttn_bttn-edit {
-
+          cursor: pointer;
         }
 
         todo-list__item-bttn_bttn-save {
-
+          cursor: pointer;
         }
       }
     }
@@ -236,15 +244,15 @@ body {
         flex-grow: 1;
 
         todo-list__item-bttn_bttn-del {
-
+          cursor: pointer;
         }
 
         todo-list__item-bttn_bttn-edit {
-
+          cursor: pointer;
         }
 
         todo-list__item-bttn_bttn-save {
-
+          cursor: pointer;
         }
       }
     }
