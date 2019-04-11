@@ -7,7 +7,7 @@ class ToDoList extends Component {
     render() {
         let items = this.props.items.map((item, index) => {
             return (
-                <ItemToDo key={index} item={item} index={index} removeItem={this.props.removeItem} markTodoDone={this.props.markTodoDone} />
+                <ItemToDo key={index} item={item} index={index} removeItem={this.props.removeItem} markTodoDone={this.props.markTodoDone} editItem={this.props.editItem} saveItem={this.props.saveItem} />
             );
         });
         return (
