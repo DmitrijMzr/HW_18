@@ -4,14 +4,16 @@ class ItemToDo extends Component {
 
     state = {
         isEdit: false,
-        renameItem: this.props.item.value
+        renameItem: ''
     }
 
     onClickClose = () => {
+
         const index = parseInt(this.props.index);
         this.props.removeItem(index);
     }
     onClickDone = () => {
+
         const index = parseInt(this.props.index);
         this.props.markTodoDone(index);
     }
@@ -19,23 +21,23 @@ class ItemToDo extends Component {
     onChange = (e) => this.setState({ [e.target.name]: e.target.value })
 
     saveItem = () => {
-       const index = parseInt(this.props.index);
-        this.props.saveItem(index, this.state.renameItem);
 
+        const index = parseInt(this.props.index);
+        this.setState(()=>({renameItem: this.props.item.value}));
+        this.props.saveItem(index, this.state.renameItem);
         this.setState(() => ({isEdit: false}))
     }
 
-    editButton = () => {
-
+    editItem = () => {
+        this.setState(()=>({renameItem: this.props.item.value}));
         this.setState(() => ({isEdit: true}))
-       /* const index = parseInt(this.props.index);
-        this.props.editItem(index);*/
     }
 
     render() {
         let todoClass = this.props.item.done ? "done" : "undone";
 
-        let toggleButton;
+        let toggleButton1;
+        let toggleButton2;
         let toggleTitle;
 
         if(!this.state.isEdit) {
@@ -53,13 +55,20 @@ class ItemToDo extends Component {
         }
 
         if(!this.state.isEdit) {
-            toggleButton = <button type="button"
+            toggleButton1 = <button type="button"
                                    className="todo-list__item-bttn_bttn-edit"
-                                   onClick={this.editButton}>Edit</button>
+                                   onClick={this.editItem}>Edit</button>
+            toggleButton2 = <button type="button"
+                                    className="todo-list__item-bttn_bttn-del"
+                                    onClick={this.onClickClose}>&times;</button>
         } else {
-            toggleButton = <button type="button"
+            toggleButton1 = <button type="button"
                                    className="todo-list__item-bttn_bttn-save"
                                    onClick={this.saveItem}>Save</button>
+            toggleButton2 = <button type="button"
+                                    className="todo-list__item-bttn_bttn-del"
+                                    onClick={this.onClickClose} disabled>&times;</button>
+
         }
 
         return (
@@ -67,11 +76,8 @@ class ItemToDo extends Component {
                 <div className={todoClass} aria-hidden="true">
                     {toggleTitle}
                     <div className="todo-list__item-bttn">
-                        {toggleButton}
-                        <button
-                            type="button"
-                            className="todo-list__item-bttn_bttn-del"
-                            onClick={this.onClickClose}>&times;</button>
+                        {toggleButton1}
+                        {toggleButton2}
                     </div>
                 </div>
             </div>

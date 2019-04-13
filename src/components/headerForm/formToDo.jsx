@@ -4,6 +4,7 @@ import ComponentHead from './head';
 class InputsHeader extends Component {
 
     state = {
+        isChecked: true,
         title: ''
     }
 
@@ -15,7 +16,21 @@ class InputsHeader extends Component {
         }
     }
 
-    onChange = (e) => this.setState({ [e.target.name]: e.target.value })
+    filterDoneItem = () => {
+        this.props.hideDoneItem(this.state.isChecked)
+    }
+
+    onChange = (e) => {
+        if (e.target.name === 'title') {
+            this.setState({[e.target.name]: e.target.value})
+        }
+        if (e.target.name === 'filter') {
+            this.setState(() => ({isChecked: !this.state.isChecked}))
+            this.filterDoneItem()
+        }
+    }
+
+
 
     render() {
         return (
@@ -39,8 +54,10 @@ class InputsHeader extends Component {
                 <div className={'container-input__checkbox checkbox'}>
                     <label htmlFor="checked">Hide completed task</label>
                     <input
-                        id="checked"
-                        type="checkbox"/>
+                        id='checked'
+                        name='filter'
+                        type='checkbox'
+                        onChange={this.onChange}/>
                 </div>
             </div>
 
