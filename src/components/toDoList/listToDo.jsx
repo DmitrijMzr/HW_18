@@ -9,20 +9,27 @@ const ToDoList = props => {
         removeItem,
         markTodoDone,
         editItem,
-        saveItem
+        saveItem,
+        isHidden,
+        checkedHide
     } = props
 
     let renderedItems = items.map((item, index) => {
-        return (
-            <ItemToDo
-                key = {index}
-                item = {item}
-                index = {index}
-                removeItem = {removeItem}
-                markTodoDone = {markTodoDone}
-                editItem = {editItem}
-                saveItem = {saveItem}/>
-        );
+
+        let todoTask;
+        if (checkedHide(item, isHidden)) {
+            todoTask = <ItemToDo
+                          key={index}
+                          item={item}
+                          index={index}
+                          removeItem={removeItem}
+                          markTodoDone={markTodoDone}
+                          editItem={editItem}
+                          saveItem={saveItem}/>
+        } else {
+            todoTask = null
+        }
+        return todoTask
     });
 
     return (

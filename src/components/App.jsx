@@ -8,10 +8,10 @@ import '../styles/App.less';
 class App extends Component {
 
     state = {
-        todoItems: []
+        todoItems: [],
+        isHidden: false
     }
 
-    arrDoneTask = [];
     lastIndex = 3;
 
     addItem = (todoItem) => {
@@ -47,24 +47,16 @@ class App extends Component {
         this.setState(() => ({todoItems: arr}));
     }
 
-    hideDoneItem = (check) =>{
+    hideDoneItem = () =>{
+        this.setState(() => ({isHidden: !this.state.isHidden}))
+    }
 
-        let arrUndoneTask = [];
-
-        if (check) {
-            this.arrDoneTask = this.state.todoItems;
-            this.state.todoItems.forEach( (task) => {
-                if (task.done === true) {
-                    this.arrDoneTask.push(task);
-                } else {
-                    arrUndoneTask.push(task)
-                }
-                this.setState(() => ({todoItems: arrUndoneTask}));
-            })
-        } else {
-
-            this.setState(() => ({todoItems: this.arrDoneTask}))
+    checkedHide = (item, mode) => {
+        let check = true;
+        if(item.done === true && mode) {
+            check = false;
         }
+        return check
     }
 
     render() {
@@ -79,7 +71,9 @@ class App extends Component {
                         removeItem = {this.removeItem}
                         markTodoDone = {this.markTodoDone}
                         editItem = {this.editItem}
-                        saveItem = {this.saveItem}/>
+                        saveItem = {this.saveItem}
+                        isHidden = {this.state.isHidden}
+                        checkedHide = {this.checkedHide}/>
                 </div>
             </div>
         );

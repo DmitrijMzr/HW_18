@@ -4,7 +4,6 @@ import ComponentHead from './head';
 class InputsHeader extends Component {
 
     state = {
-        isChecked: true,
         title: ''
     }
 
@@ -25,7 +24,6 @@ class InputsHeader extends Component {
             this.setState({[e.target.name]: e.target.value})
         }
         if (e.target.name === 'filter') {
-            this.setState(() => ({isChecked: !this.state.isChecked}))
             this.filterDoneItem()
         }
     }
