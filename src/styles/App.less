@@ -4,14 +4,12 @@ body {
 }
 
 .app {
-  background-color: #c6c6c6;
   display: flex;
   height: 100vh;
   align-items: center;
   justify-content: center;
-
+  background: rgba(214, 250, 255, 0.75);
   .app__todo {
-    background-color: beige;
     flex-basis: 50%;
     height: 100%;
     display: flex;
@@ -20,14 +18,17 @@ body {
 }
 
 .container-input {
-  background-color: aquamarine;
-  flex: none;
+  margin-top: 5px;
   flex: 0 0 30vh;
-  height: 30vh;
+  height: 50vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background: #262626;
+  box-sizing: border-box;
+  box-shadow: 0 10px 15px rgba(0,0,0,.5);
+
 
   .container-input__app-logo {
     margin: 0 auto;
@@ -36,7 +37,7 @@ body {
     h1 {
       margin: 0;
       padding: 0;
-      color: #111;
+      color: #ffffff;
       font-size: 4em;
       text-align: center;
 
@@ -45,7 +46,7 @@ body {
         display: table-cell;
         margin: 0;
         padding: 0;
-        animation: animate 4s linear infinite;
+        animation: animate 3s linear infinite;
       }
 
       span:nth-child(1) {
@@ -95,7 +96,7 @@ body {
         0 0 400px gba(0, 169, 248, 0.16);
       }
       5%, 95% {
-        color: #002e2f;
+        color: #ffffff;
         filter: blur(0px);
         text-shadow: none;
       }
@@ -176,8 +177,9 @@ body {
     }
 
     label {
-      font-size: 17px;
+      font-size: 1.7em;
       margin-right: 2vh;
+      color: #ffffff;
     }
   }
 }
@@ -185,16 +187,19 @@ body {
 
 
 .todo-list {
-  background-color: rgba(238, 229, 207, 0.39);
+  background: #262626 ;
   flex: none;
   height: 70vh;
   flex: 1 0 auto;
   overflow: auto;
+  margin-top: 10px;
 
   .todo-list__item {
 
     font-size: 1.4em;
+    margin-top: 5px;
     padding: 2.5vh;
+    background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.08);
     transition: all .2s;
     user-select: none;
@@ -210,25 +215,10 @@ body {
       text-decoration: line-through;
 
       .todo-list__item-description {
-          flex-grow: 8;
-      }
-
-      todo-list__item-bttn {
-        flex-grow: 1;
-
-        todo-list__item-bttn_bttn-del {
-          cursor: pointer;
-        }
-
-        todo-list__item-bttn_bttn-edit {
-          cursor: pointer;
-        }
-
-        todo-list__item-bttn_bttn-save {
-          cursor: pointer;
-        }
+        flex-grow: 8;
       }
     }
+
     .undone {
       display: flex;
       flex-direction: row;
@@ -240,32 +230,40 @@ body {
         flex-grow: 8;
       }
 
+      .todo-list__item-input {
+
+        border: none;
+        width: 90%;
+        font-size: 1em;
+        border-radius: 3px;
+        color: #000b4b;
+      }
+
       todo-list__item-bttn {
         flex-grow: 1;
 
-        todo-list__item-bttn_bttn-del {
-          cursor: pointer;
-        }
-
-        todo-list__item-bttn_bttn-edit {
-          cursor: pointer;
-        }
-
-        todo-list__item-bttn_bttn-save {
-          cursor: pointer;
-        }
       }
     }
+  }
 
+  .todo-list__item-bttn > button{
+    background: #262626;
+    outline: none;
+    border: none;
+    width: 50px;
+    height: 30px;
+    margin-right: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+  }
 
-
-
-
+  .todo-list__item-bttn > button:hover{
+    background: #585858;
 
   }
 
   .todo-list__item:hover {
-    background-color: rgba(238, 228, 195, 0.5);
+    background-color: rgb(216, 224, 217);
   }
 }
 
