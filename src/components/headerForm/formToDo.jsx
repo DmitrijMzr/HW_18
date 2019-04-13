@@ -38,23 +38,20 @@ class InputsHeader extends Component {
                 <ComponentHead />
                 <form className='container-input__form'
                     onSubmit= {this.onSubmit}>
-                    <input
-                        className='container-input__form-input'
+                    <input className='container-input__form-input'
                         type='text'
                         name="title"
                         value={this.state.title}
                         placeholder='add new todo ...'
                         onChange={this.onChange}/>
-                    <button
-                        className='container-input__form-button'
+                    <button className='container-input__form-button'
                         type='submit'>
                         Add
                     </button>
                 </form>
                 <div className={'container-input__checkbox checkbox'}>
                     <label htmlFor="checked">Hide completed task</label>
-                    <input
-                        id='checked'
+                    <input id='checked'
                         name='filter'
                         type='checkbox'
                         onChange={this.onChange}/>
