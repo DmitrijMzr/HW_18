@@ -8,7 +8,7 @@ import '../styles/App.less';
 class App extends Component {
 
     state = {
-        todoItems: [],
+        todoItems: this.props.initItems,
         isHidden: false
     }
 
