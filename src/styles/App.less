@@ -266,6 +266,23 @@ body {
     background-color: rgb(216, 224, 217);
   }
 }
+.todo-list__item_delete{
+  animation: anim 3s forwards;
+}
+@keyframes anim {
+  0%{
+    transform: scale(1.1);
+
+  }
+  50%{
+    transform: scale(2.2);
+
+  }
+
+  100%{
+    transform: scale(0.0);
+  }
+}
 
 ::-webkit-scrollbar{
   border-color: rgba(255, 237, 203, 0.56);
