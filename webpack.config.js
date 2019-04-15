@@ -1,8 +1,22 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: "./src/index.jsx",
+    mode: 'development',
+    entry: {
+        app: './src/index.jsx'
+    },
+    devServer: {
+        contentBase: './dist'
+    },
+    plugins: [
+        new CleanWebpackPlugin(),
+        new HtmlWebpackPlugin({
+            title: 'todo-list-container',
+            template: "./src/index.html"
+        })
+    ],
     output: {
         path: path.join(__dirname, "/dist"),
         filename: "index_bundle.js"
@@ -28,10 +42,5 @@ module.exports = {
                 ],
             }
         ]
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: "./src/index.html"
-        })
-    ]
+    }
 };
