@@ -82,7 +82,7 @@ describe('itemToDo.onClickDone', () => {
         //sandbox.resetHistory();
     });
 
-    it('should call removeItem with index', () => {
+    it('should call markTodoDone with index', () => {
         const props = {
             key: 1,
             item: {
@@ -100,10 +100,71 @@ describe('itemToDo.onClickDone', () => {
         const component = shallow(<ItemToDo {...props} />);
         const instance = component.instance();
         instance.onClickDone();
-        assert(spy.called);
         //assert(spy.withArgs(sinon.match(props.item.index)).calledOnce);
         sandbox.assert.calledOnce(spy);
         sandbox.assert.calledWith(spy, props.index)
+    });
+
+});
+
+describe('itemToDo.saveItem', () => {
+    let sandbox;
+
+    beforeEach(() => {
+        sandbox = sinon.createSandbox();
+    });
+
+    afterEach(() => {
+        sandbox.restore();
+        sandbox.resetHistory();
+    });
+
+    it('should call saveItem', () => {
+        const props = {
+            key: 1,
+            item: {
+                index: 2,
+                value: 'some value',
+                done: false
+            },
+            index: 3,
+            removeItem: () => {},
+            markTodoDone: () => {},
+            editItem: () => {},
+            saveItem: () => {}
+        };
+        const spy = sinon.spy(props, 'saveItem');
+        const component = shallow(<ItemToDo {...props} />);
+        const instance = component.instance();
+        instance.saveItem();
+        assert(spy.called);
+        assert(instance.state.renameItem, 'some value');
+        assert.strictEqual(instance.state.isEdit, false);
+        sandbox.assert.calledWith(spy, 3, 'some value');
+    });
+
+});
+
+describe('itemToDo.editItem', () => {
+    it('should change state accordingly', () => {
+        const props = {
+            key: 1,
+            item: {
+                index: 2,
+                value: 'some value',
+                done: false
+            },
+            index: 3,
+            removeItem: () => {},
+            markTodoDone: () => {},
+            editItem: () => {},
+            saveItem: () => {}
+        };
+        const component = shallow(<ItemToDo {...props} />);
+        const instance = component.instance();
+        instance.editItem();
+        assert(instance.state.renameItem, 'some value');
+        assert.strictEqual(instance.state.isEdit, true);
     });
 
 });
