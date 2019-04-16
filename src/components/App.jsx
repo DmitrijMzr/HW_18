@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import InputsHeader from "./headerForm/formToDo";
 import ToDoList from "./toDoList/listToDo";
 
-import '../styles/App.less';
+//import '../styles/App.less';
 
 class App extends Component {
 

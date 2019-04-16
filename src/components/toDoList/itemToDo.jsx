@@ -9,6 +9,7 @@ class ItemToDo extends Component {
     }
 
     onClickClose = () => {
+        console.log('closing with ', index);
         const index = parseInt(this.props.index);
         this.props.removeItem(index);
     }

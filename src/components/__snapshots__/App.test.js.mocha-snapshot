@@ -1,0 +1,179 @@
+exports["App component/should render correctly(0)"] = {
+  "node": {
+    "nodeType": "host",
+    "type": "div",
+    "props": {
+      "className": "app",
+      "children": {
+        "type": "div",
+        "props": {
+          "className": "app__todo",
+          "children": [
+            {
+              "type": "InputsHeader",
+              "props": {
+                "addItem": "[function]",
+                "hideDoneItem": "[function]"
+              },
+              "_store": {}
+            },
+            {
+              "type": "ToDoList",
+              "props": {
+                "items": [],
+                "removeItem": "[function]",
+                "markTodoDone": "[function]",
+                "saveItem": "[function]"
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "_store": {}
+      }
+    },
+    "rendered": {
+      "nodeType": "host",
+      "type": "div",
+      "props": {
+        "className": "app__todo",
+        "children": [
+          {
+            "type": "InputsHeader",
+            "props": {
+              "addItem": "[function]",
+              "hideDoneItem": "[function]"
+            },
+            "_store": {}
+          },
+          {
+            "type": "ToDoList",
+            "props": {
+              "items": [],
+              "removeItem": "[function]",
+              "markTodoDone": "[function]",
+              "saveItem": "[function]"
+            },
+            "_store": {}
+          }
+        ]
+      },
+      "rendered": [
+        {
+          "nodeType": "class",
+          "type": "InputsHeader",
+          "props": {
+            "addItem": "[function]",
+            "hideDoneItem": "[function]"
+          }
+        },
+        {
+          "nodeType": "function",
+          "type": "ToDoList",
+          "props": {
+            "items": [],
+            "removeItem": "[function]",
+            "markTodoDone": "[function]",
+            "saveItem": "[function]"
+          }
+        }
+      ]
+    }
+  },
+  "type": "div",
+  "props": {
+    "className": "app"
+  },
+  "children": [
+    {
+      "node": {
+        "nodeType": "host",
+        "type": "div",
+        "props": {
+          "className": "app__todo",
+          "children": [
+            {
+              "type": "InputsHeader",
+              "props": {
+                "addItem": "[function]",
+                "hideDoneItem": "[function]"
+              },
+              "_store": {}
+            },
+            {
+              "type": "ToDoList",
+              "props": {
+                "items": [],
+                "removeItem": "[function]",
+                "markTodoDone": "[function]",
+                "saveItem": "[function]"
+              },
+              "_store": {}
+            }
+          ]
+        },
+        "rendered": [
+          {
+            "nodeType": "class",
+            "type": "InputsHeader",
+            "props": {
+              "addItem": "[function]",
+              "hideDoneItem": "[function]"
+            }
+          },
+          {
+            "nodeType": "function",
+            "type": "ToDoList",
+            "props": {
+              "items": [],
+              "removeItem": "[function]",
+              "markTodoDone": "[function]",
+              "saveItem": "[function]"
+            }
+          }
+        ]
+      },
+      "type": "div",
+      "props": {
+        "className": "app__todo"
+      },
+      "children": [
+        {
+          "node": {
+            "nodeType": "class",
+            "type": "InputsHeader",
+            "props": {
+              "addItem": "[function]",
+              "hideDoneItem": "[function]"
+            }
+          },
+          "type": "InputsHeader",
+          "props": {
+            "addItem": "[function]",
+            "hideDoneItem": "[function]"
+          }
+        },
+        {
+          "node": {
+            "nodeType": "function",
+            "type": "ToDoList",
+            "props": {
+              "items": [],
+              "removeItem": "[function]",
+              "markTodoDone": "[function]",
+              "saveItem": "[function]"
+            }
+          },
+          "type": "ToDoList",
+          "props": {
+            "items": [],
+            "removeItem": "[function]",
+            "markTodoDone": "[function]",
+            "saveItem": "[function]"
+          }
+        }
+      ]
+    }
+  ]
+};
+
